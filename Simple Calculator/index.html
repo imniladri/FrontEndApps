@@ -1,0 +1,79 @@
+<html>
+<head>
+	<!-- Meta character set -->
+    <meta charset="utf-8">
+    <!-- Site Title -->
+    <title>Calculator</title>
+    <!-- Author Meta -->
+    <meta name="author" content="niladri">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon-->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+	<!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<!-- Main Loader Style/Animation -->
+		<div class="loader">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+		<!-- Loader Style Ends (Change this section only) -->
+	</div>
+
+	<!-- Main Calculator Content -->
+	<div class="container">
+
+		<h1 class="heading">My Calculator</h1>
+		<p class="para">~~ This calculator is made by me ~~ <br>~~ NILADRI ~~</p>
+
+		<div id="calculator">
+
+			<div id="result">
+				<div id="history">
+					<p id="history-value"></p>
+				</div>
+				<div id="output">
+					<p id="output-value"></p>
+				</div>
+			</div>
+
+			<div id="keyboard">
+				<button class="operator" id="clear">C</button>
+				<button class="operator" id="backspace">AC</button>
+				<button class="operator" id="%">%</button>
+				<button class="operator" id="/">&#247;</button>
+				<button class="number" id="7">7</button>
+				<button class="number" id="8">8</button>
+				<button class="number" id="9">9</button>
+				<button class="operator" id="*">&times;</button>
+				<button class="number" id="4">4</button>
+				<button class="number" id="5">5</button>
+				<button class="number" id="6">6</button>
+				<button class="operator" id="-">-</button>
+				<button class="number" id="1">1</button>
+				<button class="number" id="2">2</button>
+				<button class="number" id="3">3</button>
+				<button class="operator" id="+">+</button>
+				<button class="empty" id="empty"></button>
+				<button class="number" id="0">0</button>
+				<button class="empty" id="empty"></button>
+				<button class="operator" id="=">=</button>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- JS -->
+	<script src="assets/js/script.js"></script>
+	<script src="assets/js/loading.js"></script>
+</body>
+</html>

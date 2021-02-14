@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #FAFAFA;
+}
+
+.clock1,.clock2,.clock3,.clock4 {
+	width: auto;
+	margin: 80px auto;
+}
+
+.flip-clock-dot {background: #555}
+
+.flip-clock-divider .flip-clock-label {color: #333}
+
+.flip-clock-meridium a,.flip-clock-meridium a:hover {color: #444}

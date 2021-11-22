@@ -1,8 +1,8 @@
-# Front End Web Apps
+# **Front End Web Apps**
 
 **_Here, some front end developed small applications._**
 
-## _Table of Contents_
+## **Table of Contents**
 
 ```
 Preview || Links || Code

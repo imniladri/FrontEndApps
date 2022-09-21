@@ -14,6 +14,8 @@ Preview || Links || Code
 
 3. [Simple Digital Clock](https://imniladri.github.io/FrontEndApps/Simple-Digital-Clock/)
 
-4. [Simple Weather App](https://imniladri.github.io/FrontEndApps/Simple-Weather-App/)
+4. [Simple Climate App](https://imniladri.github.io/FrontEndApps/Simple-Climate-App/)
+
+5. [Simple Weather App](https://imniladri.github.io/FrontEndApps/Simple-Weather-App/)
 
 _-- More Coming Soon --_

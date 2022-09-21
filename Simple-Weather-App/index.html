@@ -2,36 +2,104 @@
 <html lang="en">
 
 <head>
-	<title>Simple Weather App</title>
-	<link rel="shortcut icon" type="image/png" href="favicon.png?v=2" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Simple Climate App</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2" />
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" />
-	<link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script defer src="./app.js"></script>
 </head>
 
 <body>
 
-	<div class="container">
-		<h2>Weather</h2>
+    <div id="preloader">
+        <div class="loader">
+            <object data="./img/loader.svg"></object>
+            <div>
+                <span style="--i:1">L</span>
+                <span style="--i:2">o</span>
+                <span style="--i:3">a</span>
+                <span style="--i:4">d</span>
+                <span style="--i:5">i</span>
+                <span style="--i:6">n</span>
+                <span style="--i:7">g</span>
+                <span style="--i:8">.</span>
+                <span style="--i:9">.</span>
+                <span style="--i:10">.</span>
+            </div>
+        </div>
+    </div>
 
-		<div class="notification">
-			<p>Browser doesn't Support Geolocation</p>
-		</div>
+    <div class="container">
 
-		<div class="weather-container">
-			<div class="weather-icon">
-				<img src="icons/unknown.png" />
-			</div>
-			<p class="temperature-value">- °<span>C</span></p>
-			<p class="temperature-description"> - </p>
-			<p class="location">-</p>
-		</div>
-	</div>
+        <div class="header">
+            <a class="back"><i class="bx bxs-left-arrow"></i></a>
+            <h4>Weather App</h4>
+        </div>
 
-	<script src="./app.js"></script>
+        <!-- Display Part Start -->
+        <div class="display_part">
+            <p class="info_text">Please enter a valid city name</p>
+            <div class="input_field">
+                <img src="./img/search.svg" />
+                <input type="text" placeholder="Enter City Name" spellcheck="false">
+                <button class="btn searchBtn">Check</button>
+            </div>
+            <div class="separator"></div>
+            <div class="input_field">
+                <img src="./img/device.svg" />
+                <button class="btn locationBtn">Get From Device Location</button>
+            </div>
+        </div>
+        <!-- Display Part End -->
+
+        <!-- Weather Part Start -->
+        <div class="weather_part">
+
+            <div class="date_time">
+                <div class="date">--/--/----</div>
+                <div class="time">--:--</div>
+            </div>
+
+            <img src="#" alt="Weather Icon" class="weather_icon" />
+            
+            <div class="temperature">
+                <h2 class="number">--.--</h2>
+                <p class="weather">N/A</p>
+                <div class="location">
+                    <i class="bx bxs-map"></i>
+                    <h4 class="city">----,----</h4>
+                </div>
+            </div>
+
+            <div class="condition">
+                <div class="feels">
+                    <img src="./img/temperature.svg" alt="Feels" />
+                    <div class="text">
+                        <h4 class="number">--.--</h4>
+                        <p class="abbr">Feels Like</p>
+                    </div>
+                </div>
+
+                <div class="humidity">
+                    <img src="./img/droplet.svg" alt="Humidity" />
+                    <div class="text">
+                        <h4 class="number">--</h4>
+                        <p class="abbr">Humidity</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Weather Part End -->
+
+    </div>
 
 </body>
 

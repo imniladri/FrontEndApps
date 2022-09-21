@@ -1,0 +1,120 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #1f1d36;
+    font-family: "Outfit", sans-serif;
+}
+
+/* Main Container */
+
+.container {
+    margin: auto;
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    background: #fafafa;
+    border-radius: 10px;
+}
+
+.container h2 {
+    margin: 10px auto;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: #3f3351;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Notification Container */
+
+.notification {
+    display: none;
+    margin: 10px auto;
+    padding: 15px 10px;
+    background: #f8d7da;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(63, 51, 81, 0.1);
+}
+
+.notification p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    color: #3f3351;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Weather Container */
+
+.weather-container {
+    margin: 10px auto;
+    padding: 10px 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #eff4fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(63, 51, 81, 0.2);
+    user-select: none;
+}
+
+/* Icon */
+.weather-container .weather-icon img {
+    margin: -20px auto;
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+/* Value */
+.weather-container p.temperature-value {
+    margin: 5px auto -5px;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: #3f3351;
+    text-align: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.weather-container p.temperature-value span {
+    font-size: 30px;
+    color: #293251;
+}
+
+/* Description */
+.weather-container p.temperature-description {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: #524269;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* Location */
+.weather-container p.location {
+    margin: 5px auto;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: #524269;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}

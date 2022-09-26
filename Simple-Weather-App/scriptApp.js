@@ -68,6 +68,7 @@ searchBtn.addEventListener("click", () => {
         infoText.classList.add("error") ||
             infoText.classList.replace("success", "error") ||
             infoText.classList.replace("pending", "error");
+        clearInterval(apiDataUpdate);
     }
 
     apiDataUpdate = setInterval(() => {
@@ -86,6 +87,7 @@ locationBtn.addEventListener("click", () => {
         // alert("Your Browser does not support Geolocation API");
         infoText.innerText = "Your Browser does not support Geolocation API";
         infoText.classList.add("error");
+        clearInterval(apiDataUpdate);
     }
 
     apiDataUpdate = setInterval(() => {
@@ -110,6 +112,7 @@ function onError(error) {
     // console.log(error);
     infoText.innerText = error.message;
     infoText.classList.add("error");
+    clearInterval(apiDataUpdate);
 }
 
 // Sending request to the api for weather data of the input location *************************
@@ -137,6 +140,7 @@ function weatherDetails(info) {
     if (info.cod == "404") {
         infoText.classList.replace("pending", "error");
         infoText.innerHTML = `<span>${inputField.value}</span> is not a valid city name.`;
+        clearInterval(apiDataUpdate);
     } else {
         infoText.classList.replace("pending", "success");
         infoText.innerText = "Weather Details Fetched Successfully!";

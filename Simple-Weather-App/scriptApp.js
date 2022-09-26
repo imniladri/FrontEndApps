@@ -56,6 +56,7 @@ const bannerBox = document.querySelector(".bannerContent"),
 // Api declaration for getting the current date and time *************************
 
 let api;
+let apiDataUpdate;
 
 // Check weather details by clicking on search button *************************
 
@@ -68,6 +69,12 @@ searchBtn.addEventListener("click", () => {
             infoText.classList.replace("success", "error") ||
             infoText.classList.replace("pending", "error");
     }
+
+    apiDataUpdate = setInterval(() => {
+        if (inputField.value != "") {
+            requestApi(inputField.value);
+        }
+    }, 1000);
 });
 
 // Check weather details by clicking on location button *************************
@@ -80,6 +87,12 @@ locationBtn.addEventListener("click", () => {
         infoText.innerText = "Your Browser does not support Geolocation API";
         infoText.classList.add("error");
     }
+
+    apiDataUpdate = setInterval(() => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        }
+    }, 1000);
 });
 
 // Function for getting the weather details *************************
@@ -272,4 +285,5 @@ function weatherDetails(info) {
 
 goBack.addEventListener("click", () => {
     bannerBox.classList.remove("active");
+    clearInterval(apiDataUpdate);
 });

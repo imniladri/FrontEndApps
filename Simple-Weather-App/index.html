@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Simple Climate App</title>
+    <title>Simple Weather App</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2" />
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
     <link rel="stylesheet" href="./style.css" />
 
     <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script defer src="./app.js"></script>
+    <script defer src="./themeMode.js"></script>
+    <script defer src="./themeColor.js"></script>
+    <script defer src="./scriptApp.js"></script>
 </head>
 
 <body>
@@ -36,70 +38,116 @@
         </div>
     </div>
 
-    <div class="container">
+    <section class="mainBanner">
 
-        <div class="header">
-            <a class="back"><i class="bx bxs-left-arrow"></i></a>
-            <h4>Weather App</h4>
-        </div>
-
-        <!-- Display Part Start -->
-        <div class="display_part">
-            <p class="info_text">Please enter a valid city name</p>
-            <div class="input_field">
-                <img src="./img/search.svg" />
-                <input type="text" placeholder="Enter City Name" spellcheck="false">
-                <button class="btn searchBtn">Check</button>
-            </div>
-            <div class="separator"></div>
-            <div class="input_field">
-                <img src="./img/device.svg" />
-                <button class="btn locationBtn">Get From Device Location</button>
-            </div>
-        </div>
-        <!-- Display Part End -->
-
-        <!-- Weather Part Start -->
-        <div class="weather_part">
-
-            <div class="date_time">
-                <div class="date">--/--/----</div>
-                <div class="time">--:--</div>
-            </div>
-
-            <img src="#" alt="Weather Icon" class="weather_icon" />
-            
-            <div class="temperature">
-                <h2 class="number">--.--</h2>
-                <p class="weather">N/A</p>
-                <div class="location">
-                    <i class="bx bxs-map"></i>
-                    <h4 class="city">----,----</h4>
+        <div class="bannerContent">
+            <div class="header">
+                <div class="nav_logo">
+                    <a class="back"><i class="bx bxs-left-arrow"></i></a>
+                    <h4>Weather App</h4>
                 </div>
-            </div>
 
-            <div class="condition">
-                <div class="feels">
-                    <img src="./img/temperature.svg" alt="Feels" />
-                    <div class="text">
-                        <h4 class="number">--.--</h4>
-                        <p class="abbr">Feels Like</p>
+                <div class="settings">
+                    <div class="theme_mode">
+                        <i class="bx bx-moon darker"></i>
+                        <i class="bx bx-sun lighter"></i>
                     </div>
-                </div>
 
-                <div class="humidity">
-                    <img src="./img/droplet.svg" alt="Humidity" />
-                    <div class="text">
-                        <h4 class="number">--</h4>
-                        <p class="abbr">Humidity</p>
+                    <div class="theme_color">
+                        <i class="bx bx-palette"></i>
+                        <i class="color color_blue"></i>
+                        <i class="color color_violet"></i>
+                        <i class="color color_pink"></i>
+                        <i class="color color_orange"></i>
                     </div>
                 </div>
             </div>
 
-        </div>
-        <!-- Weather Part End -->
+            <!-- Display Part Start -->
+            <div class="display_part">
+                <p class="info_text">Please enter a city name.</p>
+                <div class="input_field">
+                    <img src="./img/search.svg" class="search" />
+                    <input type="text" placeholder="Enter City Name" spellcheck="false">
+                    <button class="btn searchBtn">Check</button>
+                </div>
+                <div class="separator"></div>
+                <div class="input_field">
+                    <img src="./img/device_desktop.svg" class="device" />
+                    <button class="btn locationBtn">Get From Device Location</button>
+                </div>
+            </div>
+            <!-- Display Part End -->
 
-    </div>
+            <!-- Weather Part Start -->
+            <div class="weather_part">
+
+                <div class="date_time">
+                    <div class="date">
+                        <img src="./img/calender.svg" alt="Calender" />
+                        <h4>--/--/----</h4>
+                    </div>
+                    <div class="time">
+                        <img src="./img/clock.svg" alt="Clock" />
+                        <h4>--:--</h4>
+                    </div>
+                </div>
+
+                <img src="#" alt="Weather Icon" class="weather_icon" />
+
+                <div class="temperature">
+                    <h2 class="number">--.--</h2>
+                    <p class="weather">N/A</p>
+                    <div class="location">
+                        <i class="bx bxs-map"></i>
+                        <h4 class="city">----,----</h4>
+                    </div>
+                </div>
+
+                <div class="condition">
+                    <div class="feels">
+                        <img src="./img/temperature.svg" alt="Feels" />
+                        <div class="text">
+                            <h4 class="number">--.--</h4>
+                            <p class="abbr">Feels Like</p>
+                        </div>
+                    </div>
+
+                    <div class="humidity">
+                        <img src="./img/droplet.svg" alt="Humidity" />
+                        <div class="text">
+                            <h4 class="number">--</h4>
+                            <p class="abbr">Humidity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <div class="speed">
+                        <img src="./img/wind_speed.svg" alt="Wind Speed" />
+                        <div class="text">
+                            <h4 class="number">--</h4>
+                            <p class="abbr">Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="direction">
+                        <img src="./img/wind_direction.svg" alt="Wind Direction" />
+                        <div class="text">
+                            <h4 class="number">------</h4>
+                            <p class="abbr">Direction</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Weather Part End -->
+        </div>
+
+        <div class="bannerImage">
+            <img src="./img/banner_img.png" alt="Banner Img" />
+        </div>
+
+    </section>
 
 </body>
 

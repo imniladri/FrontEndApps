@@ -28,8 +28,12 @@ body {
     width: 100%;
     height: 100vh;
     font-family: "Outfit", sans-serif;
-    background: var(--bgdullwhite) url(./img/banner_bg.svg) no-repeat center
-        bottom / cover;
+    background: linear-gradient(
+        315deg,
+        var(--themelight) 0%,
+        var(--themedark) 100%
+    );
+    /* background: var(--bgdullwhite) url(./img/banner_bg.svg) no-repeat center bottom / cover; */
 }
 
 ::-webkit-scrollbar {
@@ -123,7 +127,7 @@ body {
 /* +++++++++++++++++++++++++++++ */
 
 section.mainBanner {
-    margin: auto;
+    margin: 2rem;
     padding: 2rem;
     width: 100%;
     height: auto;
@@ -163,6 +167,8 @@ section.mainBanner {
 .bannerImage {
     margin: auto;
     padding: 2rem;
+
+    display: none;
 }
 
 .bannerImage img {

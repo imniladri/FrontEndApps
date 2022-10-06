@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background: #141b25;
+}
+
+section#banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background: #141b25;
+    overflow: hidden;
+    z-index: 1;
+}
+
+section#banner::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(180deg, #e91e63 0%, #fee140 100%);
+    border-radius: 50%;
+    transform: translate(-250px, -100px);
+    z-index: -1;
+}
+
+section#banner::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    transform: translate(250px, 150px);
+    z-index: -1;
+}
+
+/* ========================= Text Styles ========================= */
+
+div.calendar-header {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.calendar-header img {
+    margin: auto;
+    width: 60px;
+    height: auto;
+}
+
+div.calendar-header h2 {
+    margin: 10px auto;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+
+/* ========================= Calendar Styles ========================= */
+
+div.calendar-container {
+    margin: auto;
+    position: relative;
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    z-index: 1;
+    user-select: none;
+}
+
+div.calendar-content {
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+div.calendar-content .dycalendar-header {
+    position: relative;
+    cursor: default;
+}
+
+div.calendar-content .dycalendar-header .dycalendar-span-month-year {
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+}
+
+div.calendar-content .dycalendar-header .dycalendar-prev-next-btn {
+    padding: 5px 15px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+div.calendar-content .dycalendar-header .dycalendar-prev-next-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+div.calendar-content .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
+    left: 4px;
+}
+div.calendar-content .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+    right: 4px;
+}
+
+div.calendar-content .dycalendar-body {
+    position: relative;
+    margin-bottom: -10px;
+    cursor: default;
+}
+
+div.calendar-content .dycalendar-body table {
+    margin: auto;
+    margin-top: 40px;
+    width: 100%;
+    border-spacing: 5px;
+}
+
+div.calendar-content .dycalendar-body table tbody tr:nth-child(1) td {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+div.calendar-content .dycalendar-body table tbody tr:nth-child(1) td:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+div.calendar-content .dycalendar-body table tbody tr td {
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+div.calendar-content .dycalendar-body table tbody tr td:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+div.calendar-content .dycalendar-month-container .dycalendar-target-date,
+div.calendar-content .dycalendar-month-container .dycalendar-today-date,
+div.calendar-content .dycalendar-month-container .dycalendar-target-date:hover,
+div.calendar-content .dycalendar-month-container .dycalendar-today-date:hover {
+    color: #141b25;
+    background: #ffffff;
+}
